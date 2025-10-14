@@ -1,4 +1,5 @@
 redis
 fastapi
 flask
-
+requests
+Pillow

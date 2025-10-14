@@ -1,4 +1,4 @@
-from flask import Flask, send_from_directory, jsonify, request, abort
+from flask import Flask, send_from_directory, jsonify, abort
 import os
 
 app = Flask(__name__)
