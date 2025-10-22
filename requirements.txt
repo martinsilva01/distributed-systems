@@ -3,3 +3,4 @@ fastapi
 flask
 requests
 Pillow
+pika
