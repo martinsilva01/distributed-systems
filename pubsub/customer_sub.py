@@ -47,3 +47,6 @@ def main():
         message = message_queue.get()
         print(message)
         time.sleep(2)
+
+
+main()
