@@ -20,22 +20,26 @@ class SubscriberThread(threading.Thread):
 
 
     def run(self):
-        logger = logging.getLogger(__name__)
-        connection = pika.BlockingConnection(
-            pika.ConnectionParameters(host='localhost'))
+        try: 
+            logger = logging.getLogger(__name__)
+            connection = pika.BlockingConnection(
+                pika.ConnectionParameters(host='localhost'))
 
-        channel = connection.channel()
-        channel.exchange_declare(exchange = 'delivery', exchange_type='topic')
-        channel.queue_declare(queue='customer_updates')
-        channel.queue_bind(exchange = 'delivery', queue = 'customer_updates', routing_key = 'driver.location.1')
+            channel = connection.channel()
+            channel.exchange_declare(exchange = 'delivery', exchange_type='topic')
+            channel.queue_declare(queue='customer_updates')
+            channel.queue_bind(exchange = 'delivery', queue = 'customer_updates', routing_key = 'driver.location.1')
 
-        print('Waiting for logs.')
+            print('Waiting for logs.')
 
 
-        channel.basic_consume(queue='customer_updates', on_message_callback=self.callback, auto_ack=True)
+            channel.basic_consume(queue='customer_updates', on_message_callback=self.callback, auto_ack=True)
 
-        channel.start_consuming()
-
+            channel.start_consuming()
+        except pika.exceptions.AMQPConnectionError as e:
+            logger.error((f"[SubscriberThread] Connection failed: {e}"))
+        except Exception as e:
+            logger.error(f"[SubscriberThread] An error occurred: {e}")
         time.sleep(40)
 
         connection.close()
