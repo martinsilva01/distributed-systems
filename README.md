@@ -97,7 +97,11 @@ This section shows a Publish-Subscribe pattern using RabbitMQ.  It uses a topic 
 
 driver_pub.py:  This is the publisher.  It connects to RabbitMQ and declares a topic named delivery.  Every 5 seconds, it publishes a random location message using the routing key, "driver.location.1"
 
-customer_sub.py:  This is the subscriber.It connects to RabbitMQ, it uses the delivery topic exchange.  It specifically listens for messages matching the driver.location.1 routing key.  
+Concurrency: Uses threading to allow the driver to get and send their location in the background while still being able to do other functions in the app.
+
+customer_sub.py:  This is the subscriber.It connects to RabbitMQ, it uses the delivery topic exchange.  It specifically listens for messages matching the driver.location.1 routing key. 
+
+Concurrency: Uses threading to allow the subscriber to recieve and put the driver's location into a queue.  This is done in the background while still being able to do other functions in the app.  The main thread will look in the queue without blocking.  If it is empty, it will continue doing other functions.
 
 # How to run
 Start rabbitmq in docker: Open a terminal and run the following command.
@@ -105,6 +109,7 @@ docker run -d --hostname my-rabbit --name rabbitmq -p 5672:5672 -p 15672:15672 r
 
 Start the subscriber: Open a second terminal and run the following command.
 python3 pubsub/customer_sub.py
+end the process with ctl+C
 
 Start the publisher: Open a third terminal and run the following command.
 python3 pubsub/driver_pub.py

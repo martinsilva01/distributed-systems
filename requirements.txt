@@ -4,3 +4,8 @@ flask
 requests
 Pillow
 pika
+threading
+logging
+queue
+time
+random
