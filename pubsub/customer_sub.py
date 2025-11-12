@@ -4,12 +4,14 @@ import json
 import random
 import threading
 import queue
+import logging
 
 class SubscriberThread(threading.Thread):
     
     def __init__(self, message_queue):
         super().__init__()
         self.message_queue = message_queue
+        self.daemon = True
 
 
     def callback(self, ch, method, properties, body):
@@ -18,6 +20,7 @@ class SubscriberThread(threading.Thread):
 
 
     def run(self):
+        logger = logging.getLogger(__name__)
         connection = pika.BlockingConnection(
             pika.ConnectionParameters(host='localhost'))
 
@@ -38,15 +41,34 @@ class SubscriberThread(threading.Thread):
         connection.close()
 
 def main():
+    logging.basicConfig(
+        level = logging.INFO,
+        format='%(asctime)s - %(threadName)s - %(levelname)s - %(message)s', 
+        handlers=[
+            logging.FileHandler("subscriber.log"), 
+            logging.StreamHandler() 
+        ]
+    )
+    logger = logging.getLogger(__name__)
     message_queue = queue.Queue()
 
     location_thread = SubscriberThread(message_queue)
     location_thread.start()
 
-    while True:
-        message = message_queue.get()
-        print(message)
-        time.sleep(2)
+    logger.info('[MainThread] Waiting for messages...')
+    try:    
+        while True:
+
+            try:
+                message = message_queue.get_nowait()
+                logger.info(f'Processed: {message}')
+            except queue.Empty:
+                pass
+            logger.info('I am the main thread still doing stuff')
+            time.sleep(1)
+    except KeyboardInterrupt:
+        logger.info("\n[MainThread] Shutting down.")
+
 
 
 main()
