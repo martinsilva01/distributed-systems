@@ -131,6 +131,8 @@ Peers are connected in a random or fully connected network, using a random-walk 
 
 As of Milestone 4, Printers now take 30 seconds to finish a print job. The printer is locked until the job is done.
 
+Additionally, we guarantee that a job is only printed once by coordinating jobs across the network using Ricart-Agrawala
+
 Clients may send as many receipts as frequent as they like, but must first receive a success message for the previous receipt, simulating concurrency control.
 
 ### How It Works
@@ -146,6 +148,8 @@ Handles incoming connections and forwards messages
 Performs ping() to prune inactive neighbors
 
 Locks threads while in use.
+
+Handles job claiming via Ricart-Agrawala algorithm.
 
 `Client.py`
 
