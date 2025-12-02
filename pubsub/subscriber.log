@@ -30,3 +30,223 @@
 2025-11-11 23:18:53,553 - MainThread - INFO - I am the main thread still doing stuff
 2025-11-11 23:18:53,788 - MainThread - INFO - 
 [MainThread] Shutting down.
+2025-12-02 14:39:14,123 - MainThread - INFO - [MainThread] Waiting for messages...
+2025-12-02 14:39:14,124 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:39:14,147 - Thread-1 - INFO - Pika version 1.3.2 connecting to ('::1', 5672, 0, 0)
+2025-12-02 14:39:14,149 - Thread-1 - INFO - Socket connected: <socket.socket fd=844, family=23, type=1, proto=6, laddr=('::1', 54885, 0, 0), raddr=('::1', 5672, 0, 0)>
+2025-12-02 14:39:14,151 - Thread-1 - INFO - Streaming transport linked up: (<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001C5F3E34830>, _StreamingProtocolShim: <SelectConnection PROTOCOL transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001C5F3E34830> params=<ConnectionParameters host=localhost port=5672 virtual_host=/ ssl=False>>).
+2025-12-02 14:39:14,211 - Thread-1 - INFO - AMQPConnector - reporting success: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001C5F3E34830> params=<ConnectionParameters host=localhost port=5672 virtual_host=/ ssl=False>>
+2025-12-02 14:39:14,212 - Thread-1 - INFO - AMQPConnectionWorkflow - reporting success: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001C5F3E34830> params=<ConnectionParameters host=localhost port=5672 virtual_host=/ ssl=False>>
+2025-12-02 14:39:14,212 - Thread-1 - INFO - Connection workflow succeeded: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001C5F3E34830> params=<ConnectionParameters host=localhost port=5672 virtual_host=/ ssl=False>>
+2025-12-02 14:39:14,212 - Thread-1 - INFO - Created channel=1
+2025-12-02 14:39:15,125 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:39:16,126 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:39:17,127 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:39:18,129 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:39:19,130 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:39:20,131 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:39:21,131 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:39:22,132 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:39:23,133 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:39:24,134 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:39:25,135 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:39:26,136 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:39:27,137 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:39:28,138 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:39:29,139 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:39:30,140 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:39:31,140 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:39:32,141 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:39:33,144 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:39:34,146 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:39:35,147 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:39:36,147 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:39:37,148 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:39:38,149 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:39:39,151 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:39:40,151 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:39:41,153 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:39:42,153 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:39:43,154 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:39:44,155 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:39:45,155 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:39:46,156 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:39:47,157 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:39:48,158 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:39:49,159 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:39:50,160 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:39:51,162 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:39:52,163 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:39:53,164 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:39:54,164 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:39:55,165 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:39:56,166 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:39:57,167 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:39:58,168 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:39:59,169 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:40:00,170 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:40:01,171 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:40:02,172 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:40:03,173 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:40:03,316 - MainThread - INFO - 
+[MainThread] Shutting down.
+2025-12-02 14:41:31,380 - MainThread - INFO - [MainThread] Waiting for messages...
+2025-12-02 14:41:31,380 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:41:31,393 - Thread-1 - INFO - Pika version 1.3.2 connecting to ('::1', 5672, 0, 0)
+2025-12-02 14:41:31,395 - Thread-1 - INFO - Socket connected: <socket.socket fd=364, family=23, type=1, proto=6, laddr=('::1', 55649, 0, 0), raddr=('::1', 5672, 0, 0)>
+2025-12-02 14:41:31,396 - Thread-1 - INFO - Streaming transport linked up: (<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000002056C2B89B0>, _StreamingProtocolShim: <SelectConnection PROTOCOL transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000002056C2B89B0> params=<ConnectionParameters host=localhost port=5672 virtual_host=/ ssl=False>>).
+2025-12-02 14:41:31,453 - Thread-1 - INFO - AMQPConnector - reporting success: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000002056C2B89B0> params=<ConnectionParameters host=localhost port=5672 virtual_host=/ ssl=False>>
+2025-12-02 14:41:31,454 - Thread-1 - INFO - AMQPConnectionWorkflow - reporting success: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000002056C2B89B0> params=<ConnectionParameters host=localhost port=5672 virtual_host=/ ssl=False>>
+2025-12-02 14:41:31,454 - Thread-1 - INFO - Connection workflow succeeded: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000002056C2B89B0> params=<ConnectionParameters host=localhost port=5672 virtual_host=/ ssl=False>>
+2025-12-02 14:41:31,455 - Thread-1 - INFO - Created channel=1
+2025-12-02 14:41:32,381 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:41:33,382 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:41:34,383 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:41:35,384 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:41:36,385 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:41:37,386 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:41:38,387 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:41:38,908 - Thread-1 - ERROR - [SubscriberThread] An error occurred: 'driver'
+2025-12-02 14:41:39,388 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:41:40,390 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:41:41,391 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:41:42,392 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:41:43,393 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:41:44,393 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:41:45,394 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:41:46,396 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:41:47,396 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:41:48,397 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:41:49,398 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:41:50,399 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:41:51,088 - MainThread - INFO - 
+[MainThread] Shutting down.
+2025-12-02 14:43:34,074 - MainThread - INFO - [MainThread] Waiting for messages...
+2025-12-02 14:43:34,075 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:43:34,088 - Thread-1 - INFO - Pika version 1.3.2 connecting to ('::1', 5672, 0, 0)
+2025-12-02 14:43:34,090 - Thread-1 - INFO - Socket connected: <socket.socket fd=1040, family=23, type=1, proto=6, laddr=('::1', 53660, 0, 0), raddr=('::1', 5672, 0, 0)>
+2025-12-02 14:43:34,091 - Thread-1 - INFO - Streaming transport linked up: (<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x0000021CA2D688C0>, _StreamingProtocolShim: <SelectConnection PROTOCOL transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x0000021CA2D688C0> params=<ConnectionParameters host=localhost port=5672 virtual_host=/ ssl=False>>).
+2025-12-02 14:43:34,148 - Thread-1 - INFO - AMQPConnector - reporting success: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x0000021CA2D688C0> params=<ConnectionParameters host=localhost port=5672 virtual_host=/ ssl=False>>
+2025-12-02 14:43:34,148 - Thread-1 - INFO - AMQPConnectionWorkflow - reporting success: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x0000021CA2D688C0> params=<ConnectionParameters host=localhost port=5672 virtual_host=/ ssl=False>>
+2025-12-02 14:43:34,149 - Thread-1 - INFO - Connection workflow succeeded: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x0000021CA2D688C0> params=<ConnectionParameters host=localhost port=5672 virtual_host=/ ssl=False>>
+2025-12-02 14:43:34,150 - Thread-1 - INFO - Created channel=1
+2025-12-02 14:43:35,076 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:43:36,077 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:43:37,078 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:43:38,079 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:43:38,977 - Thread-1 - ERROR - [SubscriberThread] An error occurred: 'SubscriberThread' object has no attribute 'local_clock'
+2025-12-02 14:43:39,081 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:43:40,082 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:43:41,083 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:43:42,084 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:43:43,085 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:43:44,086 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:43:45,088 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:43:46,089 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:43:47,090 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:43:48,091 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:43:49,092 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:43:50,093 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:43:50,659 - MainThread - INFO - 
+[MainThread] Shutting down.
+2025-12-02 14:46:34,571 - MainThread - INFO - [MainThread] Waiting for messages...
+2025-12-02 14:46:34,572 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:46:34,584 - Thread-1 - INFO - Pika version 1.3.2 connecting to ('::1', 5672, 0, 0)
+2025-12-02 14:46:34,585 - Thread-1 - INFO - Socket connected: <socket.socket fd=1156, family=23, type=1, proto=6, laddr=('::1', 49680, 0, 0), raddr=('::1', 5672, 0, 0)>
+2025-12-02 14:46:34,588 - Thread-1 - INFO - Streaming transport linked up: (<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001CB9B7A8980>, _StreamingProtocolShim: <SelectConnection PROTOCOL transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001CB9B7A8980> params=<ConnectionParameters host=localhost port=5672 virtual_host=/ ssl=False>>).
+2025-12-02 14:46:34,651 - Thread-1 - INFO - AMQPConnector - reporting success: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001CB9B7A8980> params=<ConnectionParameters host=localhost port=5672 virtual_host=/ ssl=False>>
+2025-12-02 14:46:34,652 - Thread-1 - INFO - AMQPConnectionWorkflow - reporting success: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001CB9B7A8980> params=<ConnectionParameters host=localhost port=5672 virtual_host=/ ssl=False>>
+2025-12-02 14:46:34,652 - Thread-1 - INFO - Connection workflow succeeded: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001CB9B7A8980> params=<ConnectionParameters host=localhost port=5672 virtual_host=/ ssl=False>>
+2025-12-02 14:46:34,652 - Thread-1 - INFO - Created channel=1
+2025-12-02 14:46:35,574 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:46:36,575 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:46:37,576 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:46:38,577 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:46:39,578 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:46:40,579 - MainThread - INFO - Processed: Loc: 183,444 | Global Time: {'driver': 1, 'customer': 1}
+2025-12-02 14:46:40,579 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:46:41,580 - MainThread - INFO - Processed: Loc: 758,248 | Global Time: {'driver': 2, 'customer': 2}
+2025-12-02 14:46:41,590 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:46:42,591 - MainThread - INFO - Processed: Loc: 767,262 | Global Time: {'driver': 3, 'customer': 3}
+2025-12-02 14:46:42,591 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:46:43,592 - MainThread - INFO - Processed: Loc: 841,292 | Global Time: {'driver': 4, 'customer': 4}
+2025-12-02 14:46:43,593 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:46:44,594 - MainThread - INFO - Processed: Loc: 575,542 | Global Time: {'driver': 5, 'customer': 5}
+2025-12-02 14:46:44,595 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:46:45,596 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:46:46,597 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:46:47,599 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:46:48,599 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:46:49,600 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:46:50,601 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:46:51,603 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:46:52,164 - MainThread - INFO - 
+[MainThread] Shutting down.
+2025-12-02 14:49:38,704 - MainThread - INFO - [MainThread] Waiting for messages...
+2025-12-02 14:49:38,704 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:49:38,715 - Thread-1 - INFO - Pika version 1.3.2 connecting to ('::1', 5672, 0, 0)
+2025-12-02 14:49:38,717 - Thread-1 - INFO - Socket connected: <socket.socket fd=988, family=23, type=1, proto=6, laddr=('::1', 60711, 0, 0), raddr=('::1', 5672, 0, 0)>
+2025-12-02 14:49:38,718 - Thread-1 - INFO - Streaming transport linked up: (<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x00000120688B7DD0>, _StreamingProtocolShim: <SelectConnection PROTOCOL transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x00000120688B7DD0> params=<ConnectionParameters host=localhost port=5672 virtual_host=/ ssl=False>>).
+2025-12-02 14:49:38,779 - Thread-1 - INFO - AMQPConnector - reporting success: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x00000120688B7DD0> params=<ConnectionParameters host=localhost port=5672 virtual_host=/ ssl=False>>
+2025-12-02 14:49:38,779 - Thread-1 - INFO - AMQPConnectionWorkflow - reporting success: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x00000120688B7DD0> params=<ConnectionParameters host=localhost port=5672 virtual_host=/ ssl=False>>
+2025-12-02 14:49:38,781 - Thread-1 - INFO - Connection workflow succeeded: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x00000120688B7DD0> params=<ConnectionParameters host=localhost port=5672 virtual_host=/ ssl=False>>
+2025-12-02 14:49:38,781 - Thread-1 - INFO - Created channel=1
+2025-12-02 14:49:39,705 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:49:40,706 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:49:41,707 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:49:42,708 - MainThread - INFO - Processed: Loc: 438,486 | Global Time: {'driver': 1, 'customer': 1}
+2025-12-02 14:49:42,708 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:49:43,320 - Thread-1 - WARNING - [SubscriberThread] Ignored out of order message
+2025-12-02 14:49:43,709 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:49:44,326 - Thread-1 - WARNING - [SubscriberThread] Ignored out of order message
+2025-12-02 14:49:44,710 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:49:45,711 - MainThread - INFO - Processed: Loc: 117,948 | Global Time: {'driver': 2, 'customer': 2}
+2025-12-02 14:49:45,711 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:49:46,712 - MainThread - INFO - Processed: Loc: 194,824 | Global Time: {'driver': 3, 'customer': 3}
+2025-12-02 14:49:46,713 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:49:47,714 - MainThread - INFO - Processed: Loc: 664,550 | Global Time: {'driver': 4, 'customer': 4}
+2025-12-02 14:49:47,715 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:49:48,333 - Thread-1 - WARNING - [SubscriberThread] Ignored out of order message
+2025-12-02 14:49:48,717 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:49:49,719 - MainThread - INFO - Processed: Loc: 347,302 | Global Time: {'driver': 6, 'customer': 5}
+2025-12-02 14:49:49,719 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:49:50,336 - Thread-1 - WARNING - [SubscriberThread] Ignored out of order message
+2025-12-02 14:49:50,720 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:49:51,722 - MainThread - INFO - Processed: Loc: 5,759 | Global Time: {'driver': 7, 'customer': 6}
+2025-12-02 14:49:51,722 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:49:52,723 - MainThread - INFO - Processed: Loc: 857,515 | Global Time: {'driver': 8, 'customer': 7}
+2025-12-02 14:49:52,723 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:49:53,726 - MainThread - INFO - Processed: Loc: 189,928 | Global Time: {'driver': 9, 'customer': 8}
+2025-12-02 14:49:53,727 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:49:54,727 - MainThread - INFO - Processed: Loc: 851,526 | Global Time: {'driver': 11, 'customer': 9}
+2025-12-02 14:49:54,727 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:49:55,729 - MainThread - INFO - Processed: Loc: 3,633 | Global Time: {'driver': 13, 'customer': 10}
+2025-12-02 14:49:55,730 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:49:56,348 - Thread-1 - WARNING - [SubscriberThread] Ignored out of order message
+2025-12-02 14:49:56,731 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:49:57,349 - Thread-1 - WARNING - [SubscriberThread] Ignored out of order message
+2025-12-02 14:49:57,733 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:49:58,351 - Thread-1 - WARNING - [SubscriberThread] Ignored out of order message
+2025-12-02 14:49:58,736 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:49:59,352 - Thread-1 - WARNING - [SubscriberThread] Ignored out of order message
+2025-12-02 14:49:59,737 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:50:00,356 - Thread-1 - WARNING - [SubscriberThread] Ignored out of order message
+2025-12-02 14:50:00,738 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:50:01,357 - Thread-1 - WARNING - [SubscriberThread] Ignored out of order message
+2025-12-02 14:50:01,740 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:50:02,360 - Thread-1 - WARNING - [SubscriberThread] Ignored out of order message
+2025-12-02 14:50:02,741 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:50:03,360 - Thread-1 - WARNING - [SubscriberThread] Ignored out of order message
+2025-12-02 14:50:03,742 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:50:04,362 - Thread-1 - WARNING - [SubscriberThread] Ignored out of order message
+2025-12-02 14:50:04,743 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:50:05,746 - MainThread - INFO - Processed: Loc: 695,753 | Global Time: {'driver': 14, 'customer': 11}
+2025-12-02 14:50:05,746 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:50:06,747 - MainThread - INFO - Processed: Loc: 123,370 | Global Time: {'driver': 16, 'customer': 12}
+2025-12-02 14:50:06,747 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:50:07,751 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:50:08,759 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:50:09,759 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:50:10,761 - MainThread - INFO - I am the main thread still doing stuff
+2025-12-02 14:50:11,682 - MainThread - INFO - 
+[MainThread] Shutting down.

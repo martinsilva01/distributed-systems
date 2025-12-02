@@ -12,11 +12,21 @@ class SubscriberThread(threading.Thread):
         super().__init__()
         self.message_queue = message_queue
         self.daemon = True
+        self.local_clock ={'driver' : 0, 'customer':0}
 
 
     def callback(self, ch, method, properties, body):
-        message = body.decode('utf-8')
-        self.message_queue.put(message)
+        message = json.loads(body.decode('utf-8'))
+        received_clock = message['vector_clock']
+        if received_clock['driver'] > self.local_clock['driver']:
+            self.local_clock['driver'] = received_clock['driver']
+            self.local_clock['customer'] += 1
+            display_msg = (f"Loc: {message['longitude']},{message['latitude']} | Global Time: {self.local_clock}")
+            self.message_queue.put(display_msg)
+        else:
+            logging.getLogger(__name__).warning(
+                f"[SubscriberThread] Ignored out of order message"
+            )
 
 
     def run(self):
