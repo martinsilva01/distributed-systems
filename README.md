@@ -114,7 +114,7 @@ end the process with ctl+C
 Start the publisher: Open a third terminal and run the following command.
 python3 pubsub/driver_pub.py
 
-## P2P Directory
+## P2P Directory (Added Concurrency Control)
 
 A lightweight peer-to-peer (P2P) simulation using Python UNIX sockets.
 Clients broadcast “receipt” messages (e.g., McDonald’s orders), and printer peers discover and print them exactly once, using decentralized message forwarding and neighbor discovery.
@@ -129,6 +129,10 @@ Printers receive those receipts, print them once, and remove unreachable peers v
 
 Peers are connected in a random or fully connected network, using a random-walk broadcast to prevent message loops.
 
+As of Milestone 4, Printers now take 30 seconds to finish a print job. The printer is locked until the job is done.
+
+Clients may send as many receipts as frequent as they like, but must first receive a success message for the previous receipt, simulating concurrency control.
+
 ### How It Works
 
 `Peer.py`
@@ -141,6 +145,8 @@ Handles incoming connections and forwards messages
 
 Performs ping() to prune inactive neighbors
 
+Locks threads while in use.
+
 `Client.py`
 
 Builds a formatted text receipt using Receipt.py
@@ -148,6 +154,8 @@ Builds a formatted text receipt using Receipt.py
 Broadcasts the receipt to random peers periodically
 
 Message includes the sender’s ID and unique message_id
+
+Waits for success to continue sending messages.
 
 `Printer.py`
 
