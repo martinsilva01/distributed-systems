@@ -9,11 +9,17 @@ class LocationThread(threading.Thread):
     def __init__(self):
         super().__init__()
         self.daemon = True
+        self.vector_clock = {'driver': 0, 'customer': 0}
 
     def get_location(self):
+        self.vector_clock['driver'] += random.randint(-1,2)
         longitude = random.randint(0,1000)
-        lattitute = random.randint(0,1000)
-        return f"Location:{longitude}, {lattitute}"
+        latitude = random.randint(0,1000)
+        message = {"type": "LocationUpdate",
+                   "longitude": longitude,
+                   "latitude": latitude,
+                   "vector_clock": self.vector_clock.copy()}
+        return json.dumps(message)
 
     def run(self):
         logger = logging.getLogger(__name__)
@@ -21,7 +27,7 @@ class LocationThread(threading.Thread):
         channel = connection.channel()
         channel.exchange_declare(exchange = 'delivery', exchange_type='topic')
         channel.queue_declare(queue='customer_updates')
-        for i in range(5):
+        for i in range(25):
             channel.basic_publish(exchange='delivery', routing_key='driver.location.1', body = self.get_location())
             logger.info('[LocationThread] Sent Location.')
             time.sleep(1)

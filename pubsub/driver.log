@@ -31,3 +31,155 @@
 2025-11-11 23:18:48,353 - MainThread - INFO - I am the Main Thread doing other stuff
 2025-11-11 23:18:49,353 - MainThread - INFO - I am the Main Thread doing other stuff
 2025-11-11 23:18:50,354 - MainThread - INFO - I am the Main Thread doing other stuff
+2025-12-02 14:41:38,781 - MainThread - INFO - I am the Main Thread doing other stuff
+2025-12-02 14:41:38,791 - Thread-1 - INFO - Pika version 1.3.2 connecting to ('::1', 5672, 0, 0)
+2025-12-02 14:41:38,792 - Thread-1 - INFO - Socket connected: <socket.socket fd=880, family=23, type=1, proto=6, laddr=('::1', 55654, 0, 0), raddr=('::1', 5672, 0, 0)>
+2025-12-02 14:41:38,794 - Thread-1 - INFO - Streaming transport linked up: (<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x0000022E90637E30>, _StreamingProtocolShim: <SelectConnection PROTOCOL transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x0000022E90637E30> params=<ConnectionParameters host=localhost port=5672 virtual_host=/ ssl=False>>).
+2025-12-02 14:41:38,848 - Thread-1 - INFO - AMQPConnector - reporting success: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x0000022E90637E30> params=<ConnectionParameters host=localhost port=5672 virtual_host=/ ssl=False>>
+2025-12-02 14:41:38,849 - Thread-1 - INFO - AMQPConnectionWorkflow - reporting success: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x0000022E90637E30> params=<ConnectionParameters host=localhost port=5672 virtual_host=/ ssl=False>>
+2025-12-02 14:41:38,849 - Thread-1 - INFO - Connection workflow succeeded: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x0000022E90637E30> params=<ConnectionParameters host=localhost port=5672 virtual_host=/ ssl=False>>
+2025-12-02 14:41:38,851 - Thread-1 - INFO - Created channel=1
+2025-12-02 14:41:38,858 - Thread-1 - INFO - [LocationThread] Sent Location.
+2025-12-02 14:41:39,782 - MainThread - INFO - I am the Main Thread doing other stuff
+2025-12-02 14:41:39,860 - Thread-1 - INFO - [LocationThread] Sent Location.
+2025-12-02 14:41:40,782 - MainThread - INFO - I am the Main Thread doing other stuff
+2025-12-02 14:41:40,861 - Thread-1 - INFO - [LocationThread] Sent Location.
+2025-12-02 14:41:41,783 - MainThread - INFO - I am the Main Thread doing other stuff
+2025-12-02 14:41:41,863 - Thread-1 - INFO - [LocationThread] Sent Location.
+2025-12-02 14:41:42,784 - MainThread - INFO - I am the Main Thread doing other stuff
+2025-12-02 14:41:42,864 - Thread-1 - INFO - [LocationThread] Sent Location.
+2025-12-02 14:41:43,785 - MainThread - INFO - I am the Main Thread doing other stuff
+2025-12-02 14:41:43,866 - Thread-1 - INFO - Closing connection (200): Normal shutdown
+2025-12-02 14:41:43,866 - Thread-1 - INFO - Closing channel (200): 'Normal shutdown' on <Channel number=1 OPEN conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x0000022E90637E30> params=<ConnectionParameters host=localhost port=5672 virtual_host=/ ssl=False>>>
+2025-12-02 14:41:43,868 - Thread-1 - INFO - Received <Channel.CloseOk> on <Channel number=1 CLOSING conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x0000022E90637E30> params=<ConnectionParameters host=localhost port=5672 virtual_host=/ ssl=False>>>
+2025-12-02 14:41:43,868 - Thread-1 - INFO - Closing connection (200): 'Normal shutdown'
+2025-12-02 14:41:43,870 - Thread-1 - INFO - Aborting transport connection: state=1; <socket.socket fd=880, family=23, type=1, proto=6, laddr=('::1', 55654, 0, 0), raddr=('::1', 5672, 0, 0)>
+2025-12-02 14:41:43,870 - Thread-1 - INFO - _AsyncTransportBase._initate_abort(): Initiating abrupt asynchronous transport shutdown: state=1; error=None; <socket.socket fd=880, family=23, type=1, proto=6, laddr=('::1', 55654, 0, 0), raddr=('::1', 5672, 0, 0)>
+2025-12-02 14:41:43,870 - Thread-1 - INFO - Deactivating transport: state=1; <socket.socket fd=880, family=23, type=1, proto=6, laddr=('::1', 55654, 0, 0), raddr=('::1', 5672, 0, 0)>
+2025-12-02 14:41:43,884 - Thread-1 - INFO - AMQP stack terminated, failed to connect, or aborted: opened=True, error-arg=None; pending-error=ConnectionClosedByClient: (200) 'Normal shutdown'
+2025-12-02 14:41:43,884 - Thread-1 - INFO - Stack terminated due to ConnectionClosedByClient: (200) 'Normal shutdown'
+2025-12-02 14:41:43,885 - Thread-1 - INFO - Closing transport socket and unlinking: state=3; <socket.socket fd=880, family=23, type=1, proto=6, laddr=('::1', 55654, 0, 0), raddr=('::1', 5672, 0, 0)>
+2025-12-02 14:41:43,885 - Thread-1 - INFO - User-initiated close: result=BlockingConnection__OnClosedArgs(connection=<SelectConnection CLOSED transport=None params=<ConnectionParameters host=localhost port=5672 virtual_host=/ ssl=False>>, error=ConnectionClosedByClient: (200) 'Normal shutdown')
+2025-12-02 14:41:44,785 - MainThread - INFO - I am the Main Thread doing other stuff
+2025-12-02 14:41:45,786 - MainThread - INFO - I am the Main Thread doing other stuff
+2025-12-02 14:41:46,787 - MainThread - INFO - I am the Main Thread doing other stuff
+2025-12-02 14:41:47,788 - MainThread - INFO - I am the Main Thread doing other stuff
+2025-12-02 14:43:38,847 - MainThread - INFO - I am the Main Thread doing other stuff
+2025-12-02 14:43:38,861 - Thread-1 - INFO - Pika version 1.3.2 connecting to ('::1', 5672, 0, 0)
+2025-12-02 14:43:38,862 - Thread-1 - INFO - Socket connected: <socket.socket fd=1004, family=23, type=1, proto=6, laddr=('::1', 53666, 0, 0), raddr=('::1', 5672, 0, 0)>
+2025-12-02 14:43:38,864 - Thread-1 - INFO - Streaming transport linked up: (<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x0000028A5E987E30>, _StreamingProtocolShim: <SelectConnection PROTOCOL transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x0000028A5E987E30> params=<ConnectionParameters host=localhost port=5672 virtual_host=/ ssl=False>>).
+2025-12-02 14:43:38,916 - Thread-1 - INFO - AMQPConnector - reporting success: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x0000028A5E987E30> params=<ConnectionParameters host=localhost port=5672 virtual_host=/ ssl=False>>
+2025-12-02 14:43:38,918 - Thread-1 - INFO - AMQPConnectionWorkflow - reporting success: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x0000028A5E987E30> params=<ConnectionParameters host=localhost port=5672 virtual_host=/ ssl=False>>
+2025-12-02 14:43:38,918 - Thread-1 - INFO - Connection workflow succeeded: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x0000028A5E987E30> params=<ConnectionParameters host=localhost port=5672 virtual_host=/ ssl=False>>
+2025-12-02 14:43:38,919 - Thread-1 - INFO - Created channel=1
+2025-12-02 14:43:38,925 - Thread-1 - INFO - [LocationThread] Sent Location.
+2025-12-02 14:43:39,849 - MainThread - INFO - I am the Main Thread doing other stuff
+2025-12-02 14:43:39,926 - Thread-1 - INFO - [LocationThread] Sent Location.
+2025-12-02 14:43:40,850 - MainThread - INFO - I am the Main Thread doing other stuff
+2025-12-02 14:43:40,928 - Thread-1 - INFO - [LocationThread] Sent Location.
+2025-12-02 14:43:41,850 - MainThread - INFO - I am the Main Thread doing other stuff
+2025-12-02 14:43:41,930 - Thread-1 - INFO - [LocationThread] Sent Location.
+2025-12-02 14:43:42,852 - MainThread - INFO - I am the Main Thread doing other stuff
+2025-12-02 14:43:42,931 - Thread-1 - INFO - [LocationThread] Sent Location.
+2025-12-02 14:43:43,853 - MainThread - INFO - I am the Main Thread doing other stuff
+2025-12-02 14:43:43,933 - Thread-1 - INFO - Closing connection (200): Normal shutdown
+2025-12-02 14:43:43,934 - Thread-1 - INFO - Closing channel (200): 'Normal shutdown' on <Channel number=1 OPEN conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x0000028A5E987E30> params=<ConnectionParameters host=localhost port=5672 virtual_host=/ ssl=False>>>
+2025-12-02 14:43:43,936 - Thread-1 - INFO - Received <Channel.CloseOk> on <Channel number=1 CLOSING conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x0000028A5E987E30> params=<ConnectionParameters host=localhost port=5672 virtual_host=/ ssl=False>>>
+2025-12-02 14:43:43,938 - Thread-1 - INFO - Closing connection (200): 'Normal shutdown'
+2025-12-02 14:43:43,940 - Thread-1 - INFO - Aborting transport connection: state=1; <socket.socket fd=1004, family=23, type=1, proto=6, laddr=('::1', 53666, 0, 0), raddr=('::1', 5672, 0, 0)>
+2025-12-02 14:43:43,940 - Thread-1 - INFO - _AsyncTransportBase._initate_abort(): Initiating abrupt asynchronous transport shutdown: state=1; error=None; <socket.socket fd=1004, family=23, type=1, proto=6, laddr=('::1', 53666, 0, 0), raddr=('::1', 5672, 0, 0)>
+2025-12-02 14:43:43,942 - Thread-1 - INFO - Deactivating transport: state=1; <socket.socket fd=1004, family=23, type=1, proto=6, laddr=('::1', 53666, 0, 0), raddr=('::1', 5672, 0, 0)>
+2025-12-02 14:43:43,942 - Thread-1 - INFO - AMQP stack terminated, failed to connect, or aborted: opened=True, error-arg=None; pending-error=ConnectionClosedByClient: (200) 'Normal shutdown'
+2025-12-02 14:43:43,942 - Thread-1 - INFO - Stack terminated due to ConnectionClosedByClient: (200) 'Normal shutdown'
+2025-12-02 14:43:43,943 - Thread-1 - INFO - Closing transport socket and unlinking: state=3; <socket.socket fd=1004, family=23, type=1, proto=6, laddr=('::1', 53666, 0, 0), raddr=('::1', 5672, 0, 0)>
+2025-12-02 14:43:43,943 - Thread-1 - INFO - User-initiated close: result=BlockingConnection__OnClosedArgs(connection=<SelectConnection CLOSED transport=None params=<ConnectionParameters host=localhost port=5672 virtual_host=/ ssl=False>>, error=ConnectionClosedByClient: (200) 'Normal shutdown')
+2025-12-02 14:43:44,855 - MainThread - INFO - I am the Main Thread doing other stuff
+2025-12-02 14:43:45,856 - MainThread - INFO - I am the Main Thread doing other stuff
+2025-12-02 14:43:46,857 - MainThread - INFO - I am the Main Thread doing other stuff
+2025-12-02 14:43:47,857 - MainThread - INFO - I am the Main Thread doing other stuff
+2025-12-02 14:46:40,202 - MainThread - INFO - I am the Main Thread doing other stuff
+2025-12-02 14:46:40,218 - Thread-1 - INFO - Pika version 1.3.2 connecting to ('::1', 5672, 0, 0)
+2025-12-02 14:46:40,220 - Thread-1 - INFO - Socket connected: <socket.socket fd=1124, family=23, type=1, proto=6, laddr=('::1', 49685, 0, 0), raddr=('::1', 5672, 0, 0)>
+2025-12-02 14:46:40,221 - Thread-1 - INFO - Streaming transport linked up: (<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001F242907E30>, _StreamingProtocolShim: <SelectConnection PROTOCOL transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001F242907E30> params=<ConnectionParameters host=localhost port=5672 virtual_host=/ ssl=False>>).
+2025-12-02 14:46:40,275 - Thread-1 - INFO - AMQPConnector - reporting success: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001F242907E30> params=<ConnectionParameters host=localhost port=5672 virtual_host=/ ssl=False>>
+2025-12-02 14:46:40,276 - Thread-1 - INFO - AMQPConnectionWorkflow - reporting success: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001F242907E30> params=<ConnectionParameters host=localhost port=5672 virtual_host=/ ssl=False>>
+2025-12-02 14:46:40,277 - Thread-1 - INFO - Connection workflow succeeded: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001F242907E30> params=<ConnectionParameters host=localhost port=5672 virtual_host=/ ssl=False>>
+2025-12-02 14:46:40,277 - Thread-1 - INFO - Created channel=1
+2025-12-02 14:46:40,284 - Thread-1 - INFO - [LocationThread] Sent Location.
+2025-12-02 14:46:41,204 - MainThread - INFO - I am the Main Thread doing other stuff
+2025-12-02 14:46:41,285 - Thread-1 - INFO - [LocationThread] Sent Location.
+2025-12-02 14:46:42,206 - MainThread - INFO - I am the Main Thread doing other stuff
+2025-12-02 14:46:42,286 - Thread-1 - INFO - [LocationThread] Sent Location.
+2025-12-02 14:46:43,206 - MainThread - INFO - I am the Main Thread doing other stuff
+2025-12-02 14:46:43,288 - Thread-1 - INFO - [LocationThread] Sent Location.
+2025-12-02 14:46:44,208 - MainThread - INFO - I am the Main Thread doing other stuff
+2025-12-02 14:46:44,290 - Thread-1 - INFO - [LocationThread] Sent Location.
+2025-12-02 14:46:45,208 - MainThread - INFO - I am the Main Thread doing other stuff
+2025-12-02 14:46:45,292 - Thread-1 - INFO - Closing connection (200): Normal shutdown
+2025-12-02 14:46:45,292 - Thread-1 - INFO - Closing channel (200): 'Normal shutdown' on <Channel number=1 OPEN conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001F242907E30> params=<ConnectionParameters host=localhost port=5672 virtual_host=/ ssl=False>>>
+2025-12-02 14:46:45,295 - Thread-1 - INFO - Received <Channel.CloseOk> on <Channel number=1 CLOSING conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001F242907E30> params=<ConnectionParameters host=localhost port=5672 virtual_host=/ ssl=False>>>
+2025-12-02 14:46:45,296 - Thread-1 - INFO - Closing connection (200): 'Normal shutdown'
+2025-12-02 14:46:45,297 - Thread-1 - INFO - Aborting transport connection: state=1; <socket.socket fd=1124, family=23, type=1, proto=6, laddr=('::1', 49685, 0, 0), raddr=('::1', 5672, 0, 0)>
+2025-12-02 14:46:45,297 - Thread-1 - INFO - _AsyncTransportBase._initate_abort(): Initiating abrupt asynchronous transport shutdown: state=1; error=None; <socket.socket fd=1124, family=23, type=1, proto=6, laddr=('::1', 49685, 0, 0), raddr=('::1', 5672, 0, 0)>
+2025-12-02 14:46:45,298 - Thread-1 - INFO - Deactivating transport: state=1; <socket.socket fd=1124, family=23, type=1, proto=6, laddr=('::1', 49685, 0, 0), raddr=('::1', 5672, 0, 0)>
+2025-12-02 14:46:45,298 - Thread-1 - INFO - AMQP stack terminated, failed to connect, or aborted: opened=True, error-arg=None; pending-error=ConnectionClosedByClient: (200) 'Normal shutdown'
+2025-12-02 14:46:45,298 - Thread-1 - INFO - Stack terminated due to ConnectionClosedByClient: (200) 'Normal shutdown'
+2025-12-02 14:46:45,299 - Thread-1 - INFO - Closing transport socket and unlinking: state=3; <socket.socket fd=1124, family=23, type=1, proto=6, laddr=('::1', 49685, 0, 0), raddr=('::1', 5672, 0, 0)>
+2025-12-02 14:46:45,299 - Thread-1 - INFO - User-initiated close: result=BlockingConnection__OnClosedArgs(connection=<SelectConnection CLOSED transport=None params=<ConnectionParameters host=localhost port=5672 virtual_host=/ ssl=False>>, error=ConnectionClosedByClient: (200) 'Normal shutdown')
+2025-12-02 14:46:46,210 - MainThread - INFO - I am the Main Thread doing other stuff
+2025-12-02 14:46:47,211 - MainThread - INFO - I am the Main Thread doing other stuff
+2025-12-02 14:46:48,212 - MainThread - INFO - I am the Main Thread doing other stuff
+2025-12-02 14:46:49,213 - MainThread - INFO - I am the Main Thread doing other stuff
+2025-12-02 14:49:42,234 - MainThread - INFO - I am the Main Thread doing other stuff
+2025-12-02 14:49:42,248 - Thread-1 - INFO - Pika version 1.3.2 connecting to ('::1', 5672, 0, 0)
+2025-12-02 14:49:42,250 - Thread-1 - INFO - Socket connected: <socket.socket fd=780, family=23, type=1, proto=6, laddr=('::1', 60715, 0, 0), raddr=('::1', 5672, 0, 0)>
+2025-12-02 14:49:42,252 - Thread-1 - INFO - Streaming transport linked up: (<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x0000023001C0D670>, _StreamingProtocolShim: <SelectConnection PROTOCOL transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x0000023001C0D670> params=<ConnectionParameters host=localhost port=5672 virtual_host=/ ssl=False>>).
+2025-12-02 14:49:42,308 - Thread-1 - INFO - AMQPConnector - reporting success: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x0000023001C0D670> params=<ConnectionParameters host=localhost port=5672 virtual_host=/ ssl=False>>
+2025-12-02 14:49:42,310 - Thread-1 - INFO - AMQPConnectionWorkflow - reporting success: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x0000023001C0D670> params=<ConnectionParameters host=localhost port=5672 virtual_host=/ ssl=False>>
+2025-12-02 14:49:42,310 - Thread-1 - INFO - Connection workflow succeeded: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x0000023001C0D670> params=<ConnectionParameters host=localhost port=5672 virtual_host=/ ssl=False>>
+2025-12-02 14:49:42,310 - Thread-1 - INFO - Created channel=1
+2025-12-02 14:49:42,317 - Thread-1 - INFO - [LocationThread] Sent Location.
+2025-12-02 14:49:43,236 - MainThread - INFO - I am the Main Thread doing other stuff
+2025-12-02 14:49:43,318 - Thread-1 - INFO - [LocationThread] Sent Location.
+2025-12-02 14:49:44,237 - MainThread - INFO - I am the Main Thread doing other stuff
+2025-12-02 14:49:44,324 - Thread-1 - INFO - [LocationThread] Sent Location.
+2025-12-02 14:49:45,238 - MainThread - INFO - I am the Main Thread doing other stuff
+2025-12-02 14:49:45,326 - Thread-1 - INFO - [LocationThread] Sent Location.
+2025-12-02 14:49:46,250 - MainThread - INFO - I am the Main Thread doing other stuff
+2025-12-02 14:49:46,326 - Thread-1 - INFO - [LocationThread] Sent Location.
+2025-12-02 14:49:47,269 - MainThread - INFO - I am the Main Thread doing other stuff
+2025-12-02 14:49:47,330 - Thread-1 - INFO - [LocationThread] Sent Location.
+2025-12-02 14:49:48,270 - MainThread - INFO - I am the Main Thread doing other stuff
+2025-12-02 14:49:48,331 - Thread-1 - INFO - [LocationThread] Sent Location.
+2025-12-02 14:49:49,271 - MainThread - INFO - I am the Main Thread doing other stuff
+2025-12-02 14:49:49,333 - Thread-1 - INFO - [LocationThread] Sent Location.
+2025-12-02 14:49:50,273 - MainThread - INFO - I am the Main Thread doing other stuff
+2025-12-02 14:49:50,335 - Thread-1 - INFO - [LocationThread] Sent Location.
+2025-12-02 14:49:51,274 - MainThread - INFO - I am the Main Thread doing other stuff
+2025-12-02 14:49:51,336 - Thread-1 - INFO - [LocationThread] Sent Location.
+2025-12-02 14:49:52,338 - Thread-1 - INFO - [LocationThread] Sent Location.
+2025-12-02 14:49:53,339 - Thread-1 - INFO - [LocationThread] Sent Location.
+2025-12-02 14:49:54,340 - Thread-1 - INFO - [LocationThread] Sent Location.
+2025-12-02 14:49:55,343 - Thread-1 - INFO - [LocationThread] Sent Location.
+2025-12-02 14:49:56,345 - Thread-1 - INFO - [LocationThread] Sent Location.
+2025-12-02 14:49:57,347 - Thread-1 - INFO - [LocationThread] Sent Location.
+2025-12-02 14:49:58,348 - Thread-1 - INFO - [LocationThread] Sent Location.
+2025-12-02 14:49:59,350 - Thread-1 - INFO - [LocationThread] Sent Location.
+2025-12-02 14:50:00,353 - Thread-1 - INFO - [LocationThread] Sent Location.
+2025-12-02 14:50:01,355 - Thread-1 - INFO - [LocationThread] Sent Location.
+2025-12-02 14:50:02,357 - Thread-1 - INFO - [LocationThread] Sent Location.
+2025-12-02 14:50:03,358 - Thread-1 - INFO - [LocationThread] Sent Location.
+2025-12-02 14:50:04,360 - Thread-1 - INFO - [LocationThread] Sent Location.
+2025-12-02 14:50:05,361 - Thread-1 - INFO - [LocationThread] Sent Location.
+2025-12-02 14:50:06,364 - Thread-1 - INFO - [LocationThread] Sent Location.
+2025-12-02 14:50:07,365 - Thread-1 - INFO - Closing connection (200): Normal shutdown
+2025-12-02 14:50:07,365 - Thread-1 - INFO - Closing channel (200): 'Normal shutdown' on <Channel number=1 OPEN conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x0000023001C0D670> params=<ConnectionParameters host=localhost port=5672 virtual_host=/ ssl=False>>>
+2025-12-02 14:50:07,368 - Thread-1 - INFO - Received <Channel.CloseOk> on <Channel number=1 CLOSING conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x0000023001C0D670> params=<ConnectionParameters host=localhost port=5672 virtual_host=/ ssl=False>>>
+2025-12-02 14:50:07,369 - Thread-1 - INFO - Closing connection (200): 'Normal shutdown'
+2025-12-02 14:50:07,370 - Thread-1 - INFO - Aborting transport connection: state=1; <socket.socket fd=780, family=23, type=1, proto=6, laddr=('::1', 60715, 0, 0), raddr=('::1', 5672, 0, 0)>
+2025-12-02 14:50:07,370 - Thread-1 - INFO - _AsyncTransportBase._initate_abort(): Initiating abrupt asynchronous transport shutdown: state=1; error=None; <socket.socket fd=780, family=23, type=1, proto=6, laddr=('::1', 60715, 0, 0), raddr=('::1', 5672, 0, 0)>
+2025-12-02 14:50:07,371 - Thread-1 - INFO - Deactivating transport: state=1; <socket.socket fd=780, family=23, type=1, proto=6, laddr=('::1', 60715, 0, 0), raddr=('::1', 5672, 0, 0)>
+2025-12-02 14:50:07,371 - Thread-1 - INFO - AMQP stack terminated, failed to connect, or aborted: opened=True, error-arg=None; pending-error=ConnectionClosedByClient: (200) 'Normal shutdown'
+2025-12-02 14:50:07,371 - Thread-1 - INFO - Stack terminated due to ConnectionClosedByClient: (200) 'Normal shutdown'
+2025-12-02 14:50:07,372 - Thread-1 - INFO - Closing transport socket and unlinking: state=3; <socket.socket fd=780, family=23, type=1, proto=6, laddr=('::1', 60715, 0, 0), raddr=('::1', 5672, 0, 0)>
+2025-12-02 14:50:07,372 - Thread-1 - INFO - User-initiated close: result=BlockingConnection__OnClosedArgs(connection=<SelectConnection CLOSED transport=None params=<ConnectionParameters host=localhost port=5672 virtual_host=/ ssl=False>>, error=ConnectionClosedByClient: (200) 'Normal shutdown')
