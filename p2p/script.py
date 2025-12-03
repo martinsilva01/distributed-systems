@@ -1,9 +1,9 @@
 from Peer import Peer
 import Client, Printer
-import threading, time, os
+import threading, time, os, signal, sys
 
-NUM_CLIENTS = 5
-NUM_PRINTERS = 5
+NUM_CLIENTS = 5 
+NUM_PRINTERS = 5 
 all_peers = []
 
 # Create clients
@@ -25,21 +25,61 @@ for peer in all_peers:
         if neighbor.sock_path != peer.sock_path:
             peer.neighbor_set.add(neighbor.sock_path)
 
-# Launch clients
+# Launch clients and printers
 for peer in all_peers:
     if peer.role == "client":
         threading.Thread(target=Client.run_client, args=(peer,), daemon=True).start()
     elif peer.role == "printer":
         threading.Thread(target=Printer.run_printer, args=(peer,), daemon=True).start()
 
-# Keep main thread alive
-try:
-    while True:
-        time.sleep(1)
-except KeyboardInterrupt:
-    print("Shutting down peers...")
+def print_metrics_and_exit(signum=None, frame=None):
+    print("\n===== SYSTEM METRICS =====")
+    # aggregate client metrics
+    total_sent = 0
+    total_succeeded = 0
+    total_timedout = 0
+    total_violations = 0
+    latencies_all = []
+    for p in all_peers:
+        if p.role == "client":
+            m = p.metrics
+            total_sent += m["jobs_sent"]
+            total_succeeded += m["jobs_succeeded"]
+            total_timedout += m["jobs_timed_out"]
+            latencies_all += m["latencies"]
+    # aggregate printer violations
+    for p in all_peers:
+        if p.role == "printer":
+            total_violations += p.metrics["consistency_violations"]
+
+    print(f"Total jobs sent: {total_sent}")
+    print(f"Total succeeded: {total_succeeded}")
+    print(f"Total timed out: {total_timedout}")
+    if latencies_all:
+        print(f"Avg latency: {sum(latencies_all)/len(latencies_all):.3f}s")
+        print(f"Min latency: {min(latencies_all):.3f}s")
+        print(f"Max latency: {max(latencies_all):.3f}s")
+    else:
+        print("No latency data collected.")
+    print(f"Total consistency violations (duplicate prints): {total_violations}")
+
+    # shutdown sockets cleanly
     for peer in all_peers:
-        peer.server.close()
+        try:
+            peer.server.close()
+        except:
+            pass
         if os.path.exists(peer.sock_path):
-            os.unlink(peer.sock_path)
+            try:
+                os.unlink(peer.sock_path)
+            except:
+                pass
+    sys.exit(0)
+
+# hook Ctrl-C to print metrics
+signal.signal(signal.SIGINT, print_metrics_and_exit)
+
+# keep main thread alive
+while True:
+    time.sleep(1)
 
