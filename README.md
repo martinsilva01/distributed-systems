@@ -103,6 +103,9 @@ customer_sub.py:  This is the subscriber.It connects to RabbitMQ, it uses the de
 
 Concurrency: Uses threading to allow the subscriber to recieve and put the driver's location into a queue.  This is done in the background while still being able to do other functions in the app.  The main thread will look in the queue without blocking.  If it is empty, it will continue doing other functions.
 
+Vector Clock:
+Uses a vector clock to order messages sent to the subscriber. The subscriber only adds messages to the queue if the next message has a greater value than the one it last printed. This prevents the cars drivers location from going backwards in time. 
+
 ### How to run
 Start rabbitmq in docker: Open a terminal and run the following command.
 docker run -d --hostname my-rabbit --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3-management
