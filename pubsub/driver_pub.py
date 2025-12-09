@@ -38,7 +38,7 @@ def main():
         level=logging.INFO,
         format='%(asctime)s - %(threadName)s - %(levelname)s - %(message)s', 
         handlers=[
-            logging.FileHandler("driver.log"),
+            logging.FileHandler("driver_node_failure.log"),
             logging.StreamHandler()
         ]
     )

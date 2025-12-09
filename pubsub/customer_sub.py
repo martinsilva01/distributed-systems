@@ -59,7 +59,7 @@ def main():
         level = logging.INFO,
         format='%(asctime)s - %(threadName)s - %(levelname)s - %(message)s', 
         handlers=[
-            logging.FileHandler("subscriber.log"), 
+            logging.FileHandler("subscriber_node_failure.log"), 
             logging.StreamHandler() 
         ]
     )
