@@ -45,5 +45,5 @@ def run_client(peer):
             peer.metrics["jobs_timed_out"] += 1
             print(f"[CLIENT {peer.peer_id}] Timeout waiting for job {job_id}")
 
-        time.sleep(3)
+        time.sleep(10)
 
