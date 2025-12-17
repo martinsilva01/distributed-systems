@@ -12,7 +12,10 @@ class LocationThread(threading.Thread):
         self.vector_clock = {'driver': 0, 'customer': 0}
 
     def get_location(self):
-        self.vector_clock['driver'] += random.randint(-1,2)
+        fault = random.randint(0,10)
+        self.vector_clock['driver'] += 1
+        if fault == 1:
+            self.vector_clock['driver'] += -1
         longitude = random.randint(0,1000)
         latitude = random.randint(0,1000)
         message = {"type": "LocationUpdate",
