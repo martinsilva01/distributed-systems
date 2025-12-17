@@ -1,6 +1,7 @@
 from Peer import Peer
 import Client, Printer
 import threading, time, os, signal, sys
+import socketio
 
 NUM_CLIENTS = 5 
 NUM_PRINTERS = 5 
@@ -22,8 +23,18 @@ time.sleep(1)  # Allow sockets to bind
 # Assign neighbors (fully connected network for simplicity)
 for peer in all_peers:
     for neighbor in all_peers:
-        if neighbor.sock_path != peer.sock_path:
+        print(f"peer {peer.peer_id}|  neighbor {neighbor.peer_id}")
+        if abs(peer.peer_id - neighbor.peer_id) < 3 and peer.peer_id != neighbor.peer_id: 
             peer.neighbor_set.add(neighbor.sock_path)
+            print("sending event")
+            parsed_neighbor_list = []
+            for path in peer.neighbor_set:
+                neighbor_id = path.split("_")[-1].split(".")[0]
+                parsed_neighbor_list.append(neighbor_id)
+            Peer.sio.emit('edge_update', {
+                "peer_id": peer.peer_id,
+                "neighbor_set": parsed_neighbor_list
+            })
 
 # Launch clients and printers
 for peer in all_peers:

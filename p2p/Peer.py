@@ -1,7 +1,11 @@
 import time
 import socket, os, threading, json, uuid, random
+import socketio
 
 class Peer:
+
+    sio = socketio.Client()
+    sio.connect("http://127.0.0.1:8000")
 
     def __init__(self, peer_id, role="default"):
         self.role = role
@@ -47,6 +51,10 @@ class Peer:
         self.server.bind(self.sock_path)
         self.server.listen(10)
 
+        Peer.sio.emit('node_connect', { "role": self.role, 
+                                        "peer_id": self.peer_id,
+                                       });
+
         # Start listener thread
         threading.Thread(target=self.listen_loop, daemon=True).start()
 
@@ -65,19 +73,20 @@ class Peer:
     # -------------------------
     # Networking helpers
     # -------------------------
-    def send(self, path, msg):
+    def send(self, path, msg, msg_type):
         """Send JSON msg to a specific unix socket path. Returns True/False."""
         try:
             s = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
             s.connect(path)
             s.send(json.dumps(msg).encode("utf-8"))
             s.close()
+            Peer.sio.emit("edge_traffic", {"peer_id": self.peer_id, "neighbor_id": path.split("_")[-1].split(".")[0], "msg_type": msg_type } )
             return True
         except Exception:
             return False
 
 
-    def flood(self, msg):
+    def flood(self, msg, msg_type):
         """
         Flood a message to all neighbors with TTL-based loop prevention.
         'seen_jobs' prevents duplicated processing.
@@ -99,7 +108,7 @@ class Peer:
     
         # Forward to all neighbors except ourselves
         for n in list(self.neighbor_set - {self.sock_path}):
-            self.send(n, msg)
+            self.send(n, msg, msg_type)
 
     # -------------------------
     # Ricart-Agrawala: request CS
@@ -132,7 +141,7 @@ class Peer:
 
         # send REQ directly to all neighbors (not random walk)
         for neighbor_path in list(self.replies_needed):
-            self.send(neighbor_path, req_msg)
+            self.send(neighbor_path, req_msg, req_msg["type"])
 
         # if there are no neighbors, immediately allow entry
         if not self.replies_needed:
@@ -163,7 +172,7 @@ class Peer:
                 "sender_path": self.sock_path,
                 "ts": self.clock
             }
-            self.send(p, rep)
+            self.send(p, rep, rep["type"])
         self.deferred_replies.clear()
 
     # -------------------------
@@ -176,6 +185,7 @@ class Peer:
 
     def handle_connection(self, conn):
         try:
+            msg_type = None
             data = conn.recv(65536).decode("utf-8")
             if not data:
                 return
@@ -190,9 +200,11 @@ class Peer:
             # ---- RA messages first ----
             if msg.get("type") == "REQ":
                 self.handle_req(msg)
+                msg_type = "REQ"
                 return
             if msg.get("type") == "REPLY":
                 self.handle_reply(msg)
+                msg_type = "REPLY"
                 return
 
             # ---- other messages (receipts, success replies, etc.) ----
@@ -202,11 +214,24 @@ class Peer:
             payload = msg.get("payload")
             neighbors = msg.get("neighbors", [])
             success_flag = msg.get("success", False)
+            if success_flag:
+                msg_type = "SUCCESS"
             client_id = msg.get("client_id", None)
 
-            # update neighbor set using any neighbor info included in the message
-            if isinstance(neighbors, list):
-                self.neighbor_set.update(neighbors)
+#            # update neighbor set using any neighbor info included in the message
+#            if isinstance(neighbors, list):
+#                if len(self.neighbor_set) + len(neighbors) < 6:
+#                    self.neighbor_set.update(neighbors)
+#                    parsed_neighbor_list = []
+#                    for path in self.neighbor_set:
+#                        neighbor_id = path.split("_")[-1].split(".")[0]
+#                        parsed_neighbor_list.append(neighbor_id)
+#                    print("sending event")
+#                    Peer.sio.emit('edge_update', {
+#                        "peer_id": self.peer_id,
+#                        "neighbor_set": parsed_neighbor_list
+#                    })
+#
 
             # deduplicate only for job messages (message_id present)
             if message_id and message_id in self.seen_messages:
@@ -265,7 +290,9 @@ class Peer:
                 return
 
             # otherwise forward using random-walk as before
-            self.flood(msg)
+            if msg_type is None:
+                msg_type = "JOB"
+            self.flood(msg, msg_type)
 
         finally:
             conn.close()
@@ -287,7 +314,7 @@ class Peer:
         # if we're not requesting CS, reply immediately
         if not self.requesting_cs:
             rep = {"type": "REPLY", "sender_id": self.peer_id, "sender_path": self.sock_path, "ts": self.clock}
-            self.send(sender_path, rep)
+            self.send(sender_path, rep, rep["type"])
             return
 
         # compare (ts, sender_id) lexicographically
@@ -297,7 +324,7 @@ class Peer:
         if their_tuple < my_tuple:
             # incoming request has priority -> reply immediately
             rep = {"type": "REPLY", "sender_id": self.peer_id, "sender_path": self.sock_path, "ts": self.clock}
-            self.send(sender_path, rep)
+            self.send(sender_path, rep, rep["type"])
         else:
             # defer reply until after we exit CS
             self.deferred_replies.add(sender_path)
@@ -341,7 +368,7 @@ class Peer:
         }
         # Log ordering visibility
         print(f"[{time.time():.6f}] Client {self.peer_id} broadcasting job {msg['message_id']}")
-        self.flood(msg)
+        self.flood(msg, "JOB")
 
     def success(self, client_path_or_id, job_id=None):
         """
@@ -360,7 +387,7 @@ class Peer:
             "client_id": client_path_or_id,
             "neighbors": list(self.neighbor_set | {self.sock_path})
         }
-        self.flood(msg)
+        self.flood(msg, "SUCCESS")
 
     def ping(self):
         """Ping neighbors to detect alive peers (keeps neighbor_set fresh)."""
@@ -372,7 +399,7 @@ class Peer:
                     "message_id": str(uuid.uuid4()),
                     "payload": "",
                     "neighbors": list(self.neighbor_set | {self.sock_path})
-                })
+                }, "PING")
                 if ok:
                     alive.add(n)
             except:
